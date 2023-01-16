@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+}
+/* NAVBAR ------------------------------------------------------------------------ */
+#nav{
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+}
+.btn-panier{
+    border-radius: 5px;
+    margin-right: 2em !important;
+}
+
+/* BG IMG --------------------------------------------------------------------------- */
+
+#img{
+    background-image: url(../img/bgmontre.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#app{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-left: 10em;
+}
+
+/*  TYPEWRITTER */
+
+#app{
+    position: relative; top : 8em; right : 30em; 
+}
+
+/* CARDS -------------------------------------------------------------------------- */
+
+#container{
+    background-color:rgb(175, 195, 230) ;
+}
+
+.article{
+   display: flex;
+   justify-content: space-around; 
+   flex-flow: row wrap;
+}
+
+.imgCard, .cardArticle{
+    border-radius: 20px;
+}
+
+.cardArticle{
+    padding: 1%;
+    margin: 1%;
+    min-height: 50%;
+    max-height: 50%;
+    text-align: center;
+    width: 18rem;
+}
+
+.cardArticle img{
+    width: 250px;
+    height: 300px;
+}
+
+.cardArticle:hover{
+    background: rgb(143, 165, 221);
+}
+
+.cardName{
+    color: rgb(157, 3, 3);
+    text-decoration-line: underline;
+    padding-top: 1em;
+}
+
+.cardText{
+    font-style: italic;
+}
+
+.cardPrice{
+    display: inline-block;
+    border-radius: 20em;
+    background-color: green ;
+    margin-bottom: 2em;
+    width: 45%;
+}
+

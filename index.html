@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDO NOEL PENIBLE</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-3.6.2.min.js"></script>
+    <script src="js/core.js"></script>
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+    <main>
+
+        <!-- NAVBAR ----------------------------------------------------------------------------------------------------------------------------------- -->
+        <nav id="nav">
+            <nav class="navbar navbar-expand-lg bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-white" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled text-secondary">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                      <button class="btn btn-primary btn-panier" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Panier</button>
+                      <!-- <button class="btn-panier" type="submit">Voir mon panier</button> -->
+                    </form>
+                  </div>
+                </div>
+              </nav>    
+        </nav>
+
+<!-- IMG PRINCIPALE ----------------------------------------------------- -->
+        <div>
+            <div id="img">
+                <div id="app"></div>
+            </div>
+        </div>
+
+
+<!-- OFFCANVAS RIGHT -->
+
+
+  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Panier</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="offcanvas-panier">
+        <img src="img/caddie.jpg" alt="caddie" style="width: 400px; height: 350px;">
+        Votre panier est peniblement vide en ce moment !
+      </div>
+      <ul class="list-group" id="pan">
+      </ul>
+   </div>
+  </div>
+
+
+<!-- OFFCANVAS LEFT -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Valider ma commande</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Veuillez rentrer vos informations dans les champs de saisi ci-dessous.
+    </div>
+      <form action="" method="post" onsubmit="return verif();">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nom" placeholder="Nom" value="">
+            <label for="nom">Nom</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="prenom" placeholder="Nom" value="">
+            <label for="prenom">Prénom</label>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="email" placeholder="Nom" value="">
+            <label for="email">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="tel" placeholder="Nom" value="">
+            <label for="tel">N° Tél</label>
+          </div>
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adresse" placeholder="Nom" value="">
+            <label for="adresse">Adresse</label>
+          </div>
+        
+        <button type="submit" class="btn btn-primary btn_envoie" onclick="finaliser()">
+          Enregistrer
+        </button>
+      </form>
+  </div>
+</div>
+
+
+<!-- LES CARDS ---------------------------------------------------------------- -->
+
+
+<div id="cards"></div>  
+<!-- DIV POUR L'INJECTION AJAX + JSON -->
+
+
+
+
+<!-- <div class="row justify-content-around mt-4">
+     
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre1.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 159€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+     
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre2.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 139€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+     
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre3.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 129€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+     
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre4.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°4</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 119€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+    
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre5.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°5</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 139€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+   
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre6.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°6</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 119€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+    
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre7.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°7</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 129€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+    
+    <div class="cardArticle card  text-center" style="width: 18rem;">
+      <img src="img/montre8.jfif" class="card-img-top">
+        <div class="card-body">
+        </div>
+          <h5 class="card-title">Montre N°8</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima commodi, facilis nam ea quasi eos!</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Prix: 159€ </li>
+              </ul>
+            <input type="button" class="btn btn-info" value="Ajouter au panier">
+    </div>
+
+</div> -->
+
+    </main>
+</body>
+</html>

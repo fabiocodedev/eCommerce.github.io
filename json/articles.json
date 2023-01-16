@@ -1,0 +1,52 @@
+{
+    "articles" : [
+        {
+          "name": "Montre N°1",
+          "img": "img/montre1.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "159 €"
+        },
+        {
+          "name": "Montre N°2",
+          "img": "img/montre2.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "139 €"
+        },
+        {
+          "name": "Montre N°3",
+          "img": "img/montre3.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "110 €" 
+        },
+        {
+          "name": "Montre N°4",
+          "img": "img/montre4.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "99 €" 
+        },
+        {
+          "name": "Montre N°5",
+          "img": "img/montre5.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "159 €" 
+        },
+        {
+          "name": "Montre N°6",
+          "img": "img/montre6.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "139 €" 
+        },
+        {
+          "name": "Montre N°7",
+          "img": "img/montre7.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "139  €"
+        },
+        {
+          "name": "Montre N°8",
+          "img": "img/montre8.jfif",
+          "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, laboriosam.",
+          "price": "169 €" 
+        }
+    ]
+}
